@@ -312,6 +312,8 @@ def exit_actions():
     
 
     path = 'Data/' + fungi + '.xlsx'
+    if 'Data' not in os.listdir():
+        os.mkdir('Data')
     excel_book = xlsxwriter.Workbook(path)
     sheet = excel_book.add_worksheet()
 
