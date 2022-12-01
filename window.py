@@ -284,7 +284,7 @@ def toVideo(folder: str, video_name: str) -> None:
 
     if len(image_files) < min_video_frames:
         # fps needs to be decreased so that video length minimum is upheld
-        fps = round(len(image_files) / min_video_length)
+        fps = max(1,round(len(image_files) / min_video_length))
     
     # Need to sort files, files are named 
     image_files.sort()
